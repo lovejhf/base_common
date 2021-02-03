@@ -3,17 +3,12 @@ package com.wujian.android.developer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.alibaba.android.arouter.launcher.ARouter;
-
-
 import com.wujian.android.common.glide.GlideApp;
 public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
-    private String flag;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
