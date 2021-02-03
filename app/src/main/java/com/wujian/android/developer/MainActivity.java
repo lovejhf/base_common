@@ -1,8 +1,5 @@
 package com.wujian.android.developer;
-
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
-
 import com.blankj.utilcode.util.CacheDiskUtils;
 import com.wujian.android.common.BaseActivity;
 import com.wujian.android.developer.databinding.ActivityMainBinding;
@@ -17,6 +14,7 @@ public class MainActivity extends BaseActivity<MainViewModel, ActivityMainBindin
 
     @Override
     public void initView() {
+        //ui主线程
         CacheDiskUtils.getInstance().getCacheSize();
     }
 
