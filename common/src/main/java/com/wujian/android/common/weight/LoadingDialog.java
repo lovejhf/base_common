@@ -12,10 +12,9 @@ import android.view.WindowManager;
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 
+import com.blankj.utilcode.util.SizeUtils;
 import com.wujian.android.common.R;
 import com.wujian.android.common.databinding.DialogLoadingBinding;
-import com.wujian.android.common.util.DensityUtil;
-
 
 public class LoadingDialog extends Dialog {
 
@@ -30,8 +29,8 @@ public class LoadingDialog extends Dialog {
         setContentView(binding.getRoot());
         Window window = getWindow();
         WindowManager.LayoutParams lp = window.getAttributes();
-        lp.width = DensityUtil.dip2px(context, 150);
-        lp.height = DensityUtil.dip2px(context, 110);
+        lp.width = SizeUtils.dp2px( 150);
+        lp.height = SizeUtils.dp2px( 110);
         lp.gravity = Gravity.CENTER;
         window.setAttributes(lp);
     }
