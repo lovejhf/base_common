@@ -14,9 +14,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imageView = findViewById(R.id.image);
-        GlideApp.with(this)
-                .load("https://www.baidu.com/img/bd_logo.png")
-                .into(imageView);
 
     }
     public void jump(View view) {
