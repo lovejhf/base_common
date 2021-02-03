@@ -1,0 +1,92 @@
+def appcompatVersion = '1.+'
+def constraintLayoutVersion = '2.0.4'
+def  compileSdkVersion = 29
+def  buildToolsVersion ="29.0.3"
+def  minSdkVersion = 17
+def  targetSdkVersion = 29
+def  versionCode = 100
+def  versionName = "1.0"
+def  is_application = false
+ext {
+    app = [
+            applicationId    : "com.nn.shop",
+            compileSdkVersion: compileSdkVersion,
+            buildToolsVersion: buildToolsVersion,
+            minSdkVersion    : minSdkVersion,
+            targetSdkVersion : targetSdkVersion,
+            versionCode      : versionCode,
+            versionName      : versionName,
+            is_application   : is_application,
+    ]
+
+    dependencies = [
+            publicImplementation           : [
+                    "androidx.appcompat:appcompat:${appcompatVersion}",
+                    "androidx.constraintlayout:constraintlayout:${constraintLayoutVersion}",
+                    "com.google.android.material:material:${appcompatVersion}",
+                    "com.lzy.net:okgo:3.0.4",
+                    "com.alibaba:fastjson:1.2.48",
+                    "com.youth.banner:banner:+",
+                    "com.orhanobut:hawk:2.0.1",
+                    "androidx.recyclerview:recyclerview:1.0.0",
+                    "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.+",
+                    "com.hjq:toast:8.0",
+                    "com.alibaba:arouter-api:1.5.0",
+                    "androidx.multidex:multidex:2.0.0",
+                    "me.xuexuan:fragmentationx:1.0.6",
+                    "me.jessyan:autosize:1.2.1",
+                    "androidx.lifecycle:lifecycle-extensions:2.1.0",
+                    "android.arch.persistence.room:runtime:1.1.1",
+                    "com.scwang.smart:refresh-layout-kernel:2.0.1",
+                    "com.scwang.smart:refresh-footer-classics:2.0.1",
+                    "com.scwang.smart:refresh-header-classics:2.0.1",
+                    "com.github.bumptech.glide:glide:4.10.0",
+                    "com.google.android:flexbox:+",
+                    "com.github.Hitomis.transferee:GlideImageLoader:1.6.1",
+                    "com.github.Hitomis.transferee:Transferee:1.6.1",
+                    "com.blankj:utilcodex:+",
+                    "com.hjq:xxpermissions:6.5",
+                    "com.github.lygttpod:SuperTextView:+",
+                    "com.github.AriesHoo.UIWidget:widget-core:+",
+                    "com.github.AriesHoo.UIWidget:widget-alert:+",
+                    "com.github.AriesHoo.UIWidget:widget-collapsing:+",
+                    "cn.bingoogolapple:bga-badgeview-api:1.1.8",
+                    "com.gyf.immersionbar:immersionbar:3.0.0",
+//                    "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+
+
+            ],
+            tabLayoutImplementation: [
+                    "com.github.AriesHoo.UIWidget:tab-layout:+"
+
+            ],
+            publicTestImplementation       : [
+                    "junit:junit:4.12"
+            ],
+            publicandroidTestImplementation: [
+                    "androidx.test.ext:junit:1.1.1", "androidx.test.espresso:espresso-core:3.2.0"
+            ],
+            common                          : [
+                    path: ':common'
+            ],
+//            appAllImplementation           : [
+//                    ':NNCircle',
+//                    ':NNCoupon',
+//                    ':NNMember',
+//                    ':NNProduct'
+//
+//            ],
+            annotationProcessor            : [
+                    "com.alibaba:arouter-compiler:1.2.2",
+                    "android.arch.persistence.room:compiler:1.1.1",
+                    "com.github.bumptech.glide:compiler:4.10.0",
+                    "cn.bingoogolapple:bga-badgeview-compiler:1.1.8"
+            ],
+
+
+
+    ]
+
+
+}
+
