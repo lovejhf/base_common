@@ -1,31 +1,23 @@
 package com.wujian.android.common;
 
-import android.content.pm.ActivityInfo;
-import android.os.Bundle;
 
-import androidx.annotation.Nullable;
+import androidx.databinding.ViewDataBinding;
 
-//import com.alibaba.android.arouter.launcher.ARouter;
-
-import com.alibaba.android.arouter.launcher.ARouter;
-
-import me.yokeyword.fragmentation.SupportActivity;
+import com.wujian.android.common.livedata.BaseViewModel;
 
 
-public abstract class BaseActivity extends SupportActivity {
+public abstract class BaseActivity<VM extends BaseViewModel,DB extends ViewDataBinding> extends BasicActivity<DB> {
+    protected VM viewModel;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        ARouter.getInstance().inject(this);   //注入
-        setContentView(getLayout());
-        initView();
+    protected DB initDataBinding(int layoutId) {
+        DB db = super.initDataBinding( layoutId);
+        viewModel = initViewModel();
+        return db;
     }
 
-    public abstract int  getLayout();
-
-    public abstract  void  initView();
-
-
+    /**
+     * 初始化ViewModel
+     */
+    protected abstract VM initViewModel();
 }

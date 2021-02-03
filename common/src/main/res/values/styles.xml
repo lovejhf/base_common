@@ -17,5 +17,22 @@
         <!--背景变暗-->
         <item name="android:backgroundDimEnabled">false</item>
     </style>
+    <style parent="Theme.AppCompat.Light.NoActionBar" name="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="colorAccent">@color/pink</item>
+        <item name="android:textAllCaps">false</item>
+        <!--    <item name="android:windowBackground">@color/white95</item>-->
+        <item name="android:textSize">13sp</item>
+        <item name="pressedAlpha">0.8</item>
+        <item name="disabledAlpha">0.2</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowNoDisplay">false</item>
+        <!-- 搞掂字体大小-->
+        <item name="android:textColor">@color/black90</item>
+        <item name="actionMenuTextColor">@android:color/black</item>
 
+    </style>
 </resources>
